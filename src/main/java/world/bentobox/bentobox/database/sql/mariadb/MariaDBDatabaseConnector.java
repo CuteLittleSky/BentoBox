@@ -43,6 +43,7 @@ public class MariaDBDatabaseConnector extends SQLDatabaseConnector
 
         config.addDataSourceProperty("useSsl", this.dbSettings.isUseSSL());
         config.addDataSourceProperty("allowMultiQueries", "true");
+        config.addDataSourceProperty("autoReconnect", "true");
 
         // Add extra properties.
         this.dbSettings.getExtraProperties().forEach(config::addDataSourceProperty);
